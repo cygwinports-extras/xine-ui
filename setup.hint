@@ -1,0 +1,10 @@
+category: Audio Video
+requires: cygwin libX11_6 libXext6 libXft2 libXtst6 libaa1 libcaca0 libcurl3 libiconv2 libintl8 libpng12 libreadline6 libxine1
+sdesc: "Xine multimedia players"
+ldesc: "xine is a free multimedia player. It plays back CDs, DVDs, and
+VCDs. It also decodes multimedia files like AVI, MOV, WMV, and MP3 from
+local disk drives, and displays multimedia streamed over the Internet.
+It interprets many of the most common multimedia formats available - and
+some of the most uncommon formats, too.
+
+This package provides several GUI Xine clients."
