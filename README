@@ -20,8 +20,8 @@ Runtime requirements:
   libiconv2-1.11-1
   libintl8-0.15-1
   libpng12-1.2.12-1
-  libreadline6-5.2.1-6
-  libxine1-1.1.4-1
+  libreadline6-5.2.2-7
+  libxine1-1.1.6-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -29,7 +29,7 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.10-1
+  cygport-0.2.11-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   libtool1.5-1.5.23a-2
@@ -46,15 +46,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xine-ui-0.99.4.20070217-X-src.tar.bz2
+  unpack xine-ui-0.99.5-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xine-ui-0.99.4.20070217-X.cygport all
+  cygport ./xine-ui-0.99.5-X.cygport all
 
 This will create:
-  /usr/src/xine-ui-0.99.4.20070217-X-src.tar.bz2
-  /usr/src/xine-ui-0.99.4.20070217-X.tar.bz2
+  /usr/src/xine-ui-0.99.5-X-src.tar.bz2
+  /usr/src/xine-ui-0.99.5-X.tar.bz2
 
 -------------------------------------------
 
@@ -69,14 +69,14 @@ Files included in the binary package:
   /usr/bin/xine-remote.exe
   /usr/bin/xine.exe
   /usr/share/applications/xine.desktop
-  /usr/share/doc/Cygwin/xine-ui-0.99.4.20070217.README
-  /usr/share/doc/xine-ui-0.99.4.20070217/ABOUT-NLS
-  /usr/share/doc/xine-ui-0.99.4.20070217/AUTHORS
-  /usr/share/doc/xine-ui-0.99.4.20070217/COPYING
-  /usr/share/doc/xine-ui-0.99.4.20070217/ChangeLog
-  /usr/share/doc/xine-ui-0.99.4.20070217/INSTALL
-  /usr/share/doc/xine-ui-0.99.4.20070217/NEWS
-  /usr/share/doc/xine-ui-0.99.4.20070217/README
+  /usr/share/doc/Cygwin/xine-ui-0.99.5.README
+  /usr/share/doc/xine-ui-0.99.5/ABOUT-NLS
+  /usr/share/doc/xine-ui-0.99.5/AUTHORS
+  /usr/share/doc/xine-ui-0.99.5/COPYING
+  /usr/share/doc/xine-ui-0.99.5/ChangeLog
+  /usr/share/doc/xine-ui-0.99.5/INSTALL
+  /usr/share/doc/xine-ui-0.99.5/NEWS
+  /usr/share/doc/xine-ui-0.99.5/README
   /usr/share/doc/xine-ui/README.config_en
   /usr/share/doc/xine-ui/README.cs.0.Introduction
   /usr/share/doc/xine-ui/README.cs.10.Remote_control
@@ -219,6 +219,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.99.5-1 -----
+Version bump.
 
 ----- version 0.99.4.20070217-1 -----
 Update to CVS build for X11R7 and libcaca-0.99.

@@ -1,0 +1,79 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x '*.1' -x build_rpms.sh origsrc/xine-ui-0.99.5/configure.ac src/xine-ui-0.99.5/configure.ac
+--- origsrc/xine-ui-0.99.5/configure.ac	2007-04-15 11:05:21.000000000 -0500
++++ src/xine-ui-0.99.5/configure.ac	2007-05-04 12:18:14.000000000 -0500
+@@ -43,6 +43,7 @@
+ AC_ISC_POSIX
+ CFLAGS="$saved_CFLAGS"
+ AC_PROG_CC
++AM_PROG_CC_C_O
+ AC_MINIX dnl readline
+ AC_HEADER_STDC([])
+ AC_PROG_MAKE_SET
+@@ -346,7 +347,7 @@
+ AC_ARG_WITH([aalib],
+    AS_HELP_STRING([--without-aalib], [Turn off AALIB support.]))
+ 
+-if test x"$with_aalib" = xyes; then
++if test x"$with_aalib" != xno; then
+   AM_PATH_AALIB(1.2.0,,)
+ else
+   no_aalib=yes
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x '*.1' -x build_rpms.sh origsrc/xine-ui-0.99.5/misc/desktops/Makefile.am src/xine-ui-0.99.5/misc/desktops/Makefile.am
+--- origsrc/xine-ui-0.99.5/misc/desktops/Makefile.am	2006-07-01 07:24:09.000000000 -0500
++++ src/xine-ui-0.99.5/misc/desktops/Makefile.am	2007-05-04 12:18:14.000000000 -0500
+@@ -17,5 +17,5 @@
+ 
+ pixmap_DATA = xine.xpm
+ 
+-desktopdir = $(datadir)/xine/desktop
++desktopdir = $(datadir)/applications
+ desktop_DATA = xine.desktop
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x '*.1' -x build_rpms.sh origsrc/xine-ui-0.99.5/src/xitk/Makefile.am src/xine-ui-0.99.5/src/xitk/Makefile.am
+--- origsrc/xine-ui-0.99.5/src/xitk/Makefile.am	2006-07-06 12:23:16.000000000 -0500
++++ src/xine-ui-0.99.5/src/xitk/Makefile.am	2007-05-04 12:18:14.015625000 -0500
+@@ -15,13 +15,13 @@
+ EXTRA_PROGRAMS = session_ctrl kbindings_man
+ 
+ kbindings_man_CFLAGS = $(AM_CFLAGS) -DKBINDINGS_MAN
+-kbindings_man_LDADD = @XINE_LIBS@ 
++kbindings_man_LDADD = \
+ 	     $(top_builddir)/src/xitk/xine-toolkit/libxitk.a \
+ 	     $(top_builddir)/src/xitk/oxine/liboxine.a \
+ 	     $(top_builddir)/src/common/libcommon.a \
+ 	     $(X_PRE_LIBS) $(LIRC_LIBS) $(DYNAMIC_LD_LIBS) \
+ 	     $(X_LIBS) $(XTEST_LIBS) $(CURL_LIBS) $(NVTVSIMPLE_LIBS) \
+-	     -lX11 -lm
++	     -lX11 -lm $(XINE_LIBS)
+ kbindings_man_SOURCES = kbindings.c
+ 
+ xine_SOURCES = \
+@@ -59,7 +59,7 @@
+ 	videowin.c \
+ 	viewlog.c
+ 
+-xine_LDADD = $(XINE_LIBS) \
++xine_LDADD = \
+ 	     $(top_builddir)/src/xitk/xine-toolkit/libxitk.a \
+              $(top_builddir)/src/xitk/Imlib-light/libImlib-light.a \
+ 	     $(top_builddir)/src/xitk/oxine/liboxine.a \
+@@ -67,16 +67,16 @@
+              $(top_builddir)/src/common/libcommonx.a \
+ 	     $(X_PRE_LIBS) $(LIRC_LIBS) $(DYNAMIC_LD_LIBS) $(XFT_LIBS) \
+ 	     $(X_LIBS) $(XTEST_LIBS) $(CURL_LIBS) $(NVTVSIMPLE_LIBS) \
+-	     -lX11 -lm $(DBG_LIBS) $(XV_LIB) $(LIBPNG_LIBS) $(INTLLIBS)
++	     -lX11 -lm $(DBG_LIBS) $(XV_LIB) $(LIBPNG_LIBS) $(XINE_LIBS) $(LTLIBINTL)
+ 
+ xine_remote_CFLAGS = $(AM_CFLAGS) -DNETWORK_CLIENT
+ xine_remote_SOURCES = network.c
+ xine_remote_DEPENDENCIES = $(top_builddir)/src/common/libcommon.a
+-xine_remote_LDADD = $(LTLIBINTL) $(NET_LIBS) $(THREAD_LIBS) $(READLINE_LIBS) $(NCURSES_LIB) \
+-	$(top_builddir)/src/common/libcommon.a $(DBG_LIBS)
++xine_remote_LDADD = $(top_builddir)/src/common/libcommon.a $(DBG_LIBS) \
++	$(LTLIBINTL) $(NET_LIBS) $(THREAD_LIBS) $(READLINE_LIBS) $(NCURSES_LIB)
+ 
+ session_ctrl_CFLAGS = $(AM_CFLAGS) -DCTRL_TEST
+-session_ctrl_LDADD = @XINE_LIBS@ $(top_builddir)/src/common/libcommon.a $(DBG_LIBS)
++session_ctrl_LDADD = $(top_builddir)/src/common/libcommon.a $(DBG_LIBS) $(XINE_LIBS)
+ session_ctrl_SOURCES = session.c
+ 
+ noinst_HEADERS = \

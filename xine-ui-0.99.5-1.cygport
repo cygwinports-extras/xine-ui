@@ -1,0 +1,11 @@
+# CVS_URI=":pserver:anonymous@xine.cvs.sourceforge.net:/cvsroot/xine"
+# CVS_DATE=${PVP[3]}
+# inherit cvs
+
+DESCRIPTION="Xine GUI players"
+HOMEPAGE="http://xinehq.de/"
+SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
+
+DIFF_EXCLUDES="*.1 build_rpms.sh"
+
+CYGCONF_ARGS="--disable-xinerama"
