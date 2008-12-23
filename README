@@ -9,32 +9,31 @@ some of the most uncommon formats, too.
 This package provides several GUI Xine clients.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  libX11_6-1.1.1-1
-  libXext6-1.0.2-1
-  libXft2-2.1.12-1
-  libXtst6-1.0.1-1
+  cygwin-1.5.25-15
   libaa1-1.4rc5-1
-  libcaca0-0.99.11-1
-  libcurl3-7.15.4-1
-  libiconv2-1.11-1
-  libintl8-0.15-1
-  libpng12-1.2.12-1
-  libreadline6-5.2.2-7
-  libxine1-1.1.6-1
+  libcaca0-0.99.16-1
+  libcurl4-7.16.3-1
+  libiconv2-1.12-1
+  libintl8-0.17-2
+  libpng12-1.2.33-1
+  libreadline6-5.2.13-11
+  libX11_6-1.1.5-1
+  libXext6-1.0.4-1
+  libXft2-2.1.13-1
+  libxine1-1.1.15-2
+  libXtst6-1.0.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.10-1.10-1
-  binutils-20060817-1
-  cygport-0.2.11-1
-  gawk-3.1.5-4
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.6a-1
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -219,6 +218,10 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.99.5-2 -----
+Rebuilt for updated dependencies.
+Fixed dlopen error in aaxine and cacaxine.
 
 ----- version 0.99.5-1 -----
 Version bump.

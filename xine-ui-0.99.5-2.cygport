@@ -5,7 +5,19 @@
 DESCRIPTION="Xine GUI players"
 HOMEPAGE="http://xinehq.de/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
+PATCH_URI="
+	0.99.5-as-needed.patch
+	0.99.5-desktopdir.patch
+"
 
 DIFF_EXCLUDES="*.1 build_rpms.sh"
 
-CYGCONF_ARGS="--disable-xinerama"
+CYGCONF_ARGS="
+	--disable-curl
+	--disable-lirc
+	--disable-xinerama
+	--with-aalib
+	--with-caca
+	--with-readline
+	--with-x
+"
