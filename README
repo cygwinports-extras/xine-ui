@@ -15,12 +15,13 @@ Runtime requirements:
   libcurl4-7.16.3-1
   libiconv2-1.12-1
   libintl8-0.17-2
-  libpng12-1.2.33-1
+  libpng12-1.2.34-1
   libreadline6-5.2.13-11
-  libX11_6-1.1.5-1
+  libX11_6-1.1.5-2
   libXext6-1.0.4-1
   libXft2-2.1.13-1
-  libxine1-1.1.15-2
+  libxine1-1.1.16.1-1
+  libXinerama1-1.0.3-1
   libXtst6-1.0.3-2
 
 Build requirements:
@@ -218,6 +219,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.99.5-3 -----
+Enabled Xinerama support.
 
 ----- version 0.99.5-2 -----
 Rebuilt for updated dependencies.
