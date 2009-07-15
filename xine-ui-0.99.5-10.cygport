@@ -2,6 +2,7 @@ DESCRIPTION="Xine GUI players"
 HOMEPAGE="http://xinehq.de/"
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 PATCH_URI="
+	http://patch-tracking.debian.net/patch/nondebian/dl/xine-ui/0.99.5+cvs20070914-2.1
 	0.99.5-as-needed.patch
 	0.99.5-desktopdir.patch
 "
