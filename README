@@ -9,31 +9,29 @@ some of the most uncommon formats, too.
 This package provides several GUI Xine clients.
 
 Runtime requirements:
-  cygwin-1.7.0-50
-  libaa1-1.4rc5-1
-  libcaca0-0.99.beta16-11
-  libcurl4-7.19.4-1
-  libgcc1-4.3.2-2
-  libiconv2-1.13-10
+  cygwin-1.7.1-1
+  libcurl4-7.19.6-1
+  libgcc1-4.3.4-3
+  libiconv2-1.13.1-1
   libintl8-0.17-11
-  libpng12-1.2.35-1
-  libreadline6-5.2.13-11
-  libX11_6-1.2.1-1
-  libXext6-1.0.5-10
-  libXft2-2.1.13-10
-  libxine1-1.1.16.3-1
-  libXinerama1-1.0.3-10
-  libXtst6-1.0.3-10
+  libpng12-1.2.35-10
+  libreadline7-6.0.3-2
+  libX11_6-1.3.2-2
+  libXext6-1.1.1-1
+  libXft2-2.1.14-1
+  libxine1-1.1.17-1
+  libXinerama1-1.1-1
+  libXtst6-1.1.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
   binutils-2.19.51-1
-  cygport-0.9.7-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  libtool-2.2.7a-13
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -59,165 +57,10 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /etc/postinstall/xine-ui.sh
-  /usr/bin/aaxine.exe
-  /usr/bin/cacaxine.exe
-  /usr/bin/fbxine.exe
-  /usr/bin/xine-bugreport
-  /usr/bin/xine-check
-  /usr/bin/xine-remote.exe
-  /usr/bin/xine.exe
-  /usr/share/applications/xine.desktop
-  /usr/share/doc/Cygwin/xine-ui-0.99.5.README
-  /usr/share/doc/xine-ui/AUTHORS
-  /usr/share/doc/xine-ui/COPYING
-  /usr/share/doc/xine-ui/ChangeLog
-  /usr/share/doc/xine-ui/NEWS
-  /usr/share/doc/xine-ui/README
-  /usr/share/doc/xine-ui/README.config_en
-  /usr/share/doc/xine-ui/README.cs.0.Introduction
-  /usr/share/doc/xine-ui/README.cs.10.Remote_control
-  /usr/share/doc/xine-ui/README.cs.15.MRLs
-  /usr/share/doc/xine-ui/README.cs.5.xine-ui
-  /usr/share/doc/xine-ui/README.en.0.Introduction
-  /usr/share/doc/xine-ui/README.en.10.Remote_control
-  /usr/share/doc/xine-ui/README.en.15.MRLs
-  /usr/share/doc/xine-ui/README.en.20.DVD
-  /usr/share/doc/xine-ui/README.en.25.VideoCD
-  /usr/share/doc/xine-ui/README.en.30.Advanced
-  /usr/share/doc/xine-ui/README.en.32.Window_managers
-  /usr/share/doc/xine-ui/README.en.35.Legal_issues
-  /usr/share/doc/xine-ui/README.en.5.xine-ui
-  /usr/share/doc/xine-ui/README_cs
-  /usr/share/doc/xine-ui/README_de
-  /usr/share/doc/xine-ui/README_en
-  /usr/share/doc/xine-ui/README_es
-  /usr/share/doc/xine-ui/README_fi
-  /usr/share/doc/xine-ui/README_fr
-  /usr/share/doc/xine-ui/README_it
-  /usr/share/doc/xine-ui/README_pl
-  /usr/share/doc/xine-ui/README_uk
-  /usr/share/doc/xitk/README
-  /usr/share/icons/hicolor/16x16/apps/xine.png
-  /usr/share/icons/hicolor/22x22/apps/xine.png
-  /usr/share/icons/hicolor/32x32/apps/xine.png
-  /usr/share/icons/hicolor/48x48/apps/xine.png
-  /usr/share/locale/cs/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/cs/LC_MESSAGES/xitk.mo
-  /usr/share/locale/de/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/de/LC_MESSAGES/xitk.mo
-  /usr/share/locale/eo/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/es/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/es/LC_MESSAGES/xitk.mo
-  /usr/share/locale/eu/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/eu/LC_MESSAGES/xitk.mo
-  /usr/share/locale/fr/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/fr/LC_MESSAGES/xitk.mo
-  /usr/share/locale/it/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/it/LC_MESSAGES/xitk.mo
-  /usr/share/locale/ja/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/ja/LC_MESSAGES/xitk.mo
-  /usr/share/locale/nb/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/nb/LC_MESSAGES/xitk.mo
-  /usr/share/locale/pl/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/pl/LC_MESSAGES/xitk.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/xitk.mo
-  /usr/share/locale/ru/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/ru/LC_MESSAGES/xitk.mo
-  /usr/share/locale/sk/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/sk/LC_MESSAGES/xitk.mo
-  /usr/share/locale/uk/LC_MESSAGES/xine-ui.mo
-  /usr/share/locale/uk/LC_MESSAGES/xitk.mo
-  /usr/share/man/de/man1/aaxine.1.gz
-  /usr/share/man/de/man1/xine-bugreport.1.gz
-  /usr/share/man/de/man1/xine-check.1.gz
-  /usr/share/man/de/man1/xine-remote.1.gz
-  /usr/share/man/de/man1/xine.1.gz
-  /usr/share/man/es/man1/xine.1.gz
-  /usr/share/man/fr/man1/xine.1.gz
-  /usr/share/man/man1/aaxine.1.gz
-  /usr/share/man/man1/xine-bugreport.1.gz
-  /usr/share/man/man1/xine-check.1.gz
-  /usr/share/man/man1/xine-remote.1.gz
-  /usr/share/man/man1/xine.1.gz
-  /usr/share/man/pl/man1/aaxine.1.gz
-  /usr/share/man/pl/man1/xine-remote.1.gz
-  /usr/share/man/pl/man1/xine.1.gz
-  /usr/share/pixmaps/xine.xpm
-  /usr/share/xine/oxine/mainmenu
-  /usr/share/xine/oxine/mediamarks
-  /usr/share/xine/skins/xine-ui_logo.mpv
-  /usr/share/xine/skins/xine_splash.png
-  /usr/share/xine/skins/xinetic/BigArrowDown.png
-  /usr/share/xine/skins/xinetic/BigArrowLeft.png
-  /usr/share/xine/skins/xinetic/BigArrowRight.png
-  /usr/share/xine/skins/xinetic/BigArrowUp.png
-  /usr/share/xine/skins/xinetic/CtlBg.png
-  /usr/share/xine/skins/xinetic/CtlBtn.png
-  /usr/share/xine/skins/xinetic/CtlDismiss.png
-  /usr/share/xine/skins/xinetic/CtlDummy.png
-  /usr/share/xine/skins/xinetic/CtlReset.png
-  /usr/share/xine/skins/xinetic/CtlSave.png
-  /usr/share/xine/skins/xinetic/Letters.png
-  /usr/share/xine/skins/xinetic/Letters2.png
-  /usr/share/xine/skins/xinetic/MainAutoButton.png
-  /usr/share/xine/skins/xinetic/MainBg.png
-  /usr/share/xine/skins/xinetic/MainCam.png
-  /usr/share/xine/skins/xinetic/MainClose.png
-  /usr/share/xine/skins/xinetic/MainDown.png
-  /usr/share/xine/skins/xinetic/MainEject.png
-  /usr/share/xine/skins/xinetic/MainFastB.png
-  /usr/share/xine/skins/xinetic/MainFastF.png
-  /usr/share/xine/skins/xinetic/MainFullScreen.png
-  /usr/share/xine/skins/xinetic/MainMute.png
-  /usr/share/xine/skins/xinetic/MainNav.png
-  /usr/share/xine/skins/xinetic/MainNext.png
-  /usr/share/xine/skins/xinetic/MainPause.png
-  /usr/share/xine/skins/xinetic/MainPlay.png
-  /usr/share/xine/skins/xinetic/MainPower.png
-  /usr/share/xine/skins/xinetic/MainPrev.png
-  /usr/share/xine/skins/xinetic/MainSetup.png
-  /usr/share/xine/skins/xinetic/MainStop.png
-  /usr/share/xine/skins/xinetic/MainUp.png
-  /usr/share/xine/skins/xinetic/MainVolumeBg.png
-  /usr/share/xine/skins/xinetic/MainVolumePad.png
-  /usr/share/xine/skins/xinetic/MrlBg.png
-  /usr/share/xine/skins/xinetic/MrlBtn.png
-  /usr/share/xine/skins/xinetic/MrlDismiss.png
-  /usr/share/xine/skins/xinetic/MrlFlit.png
-  /usr/share/xine/skins/xinetic/MrlSelect.png
-  /usr/share/xine/skins/xinetic/Onglet.png
-  /usr/share/xine/skins/xinetic/PlBg.png
-  /usr/share/xine/skins/xinetic/PlBtn.png
-  /usr/share/xine/skins/xinetic/PlDelete.png
-  /usr/share/xine/skins/xinetic/PlDeleteAll.png
-  /usr/share/xine/skins/xinetic/PlDismiss.png
-  /usr/share/xine/skins/xinetic/PlInputTxt.png
-  /usr/share/xine/skins/xinetic/PlItemBtn.png
-  /usr/share/xine/skins/xinetic/PlMoveDn.png
-  /usr/share/xine/skins/xinetic/PlMoveUp.png
-  /usr/share/xine/skins/xinetic/PlPlay.png
-  /usr/share/xine/skins/xinetic/PlSlidHBg.png
-  /usr/share/xine/skins/xinetic/SkItemBtn.png
-  /usr/share/xine/skins/xinetic/SkSlidBG.png
-  /usr/share/xine/skins/xinetic/SkSlidHBg.png
-  /usr/share/xine/skins/xinetic/SkSlidHPad.png
-  /usr/share/xine/skins/xinetic/SlidHPad.png
-  /usr/share/xine/skins/xinetic/SliderHBg.png
-  /usr/share/xine/skins/xinetic/SliderHPad.png
-  /usr/share/xine/skins/xinetic/SliderVBg.png
-  /usr/share/xine/skins/xinetic/SliderVPad.png
-  /usr/share/xine/skins/xinetic/SmallArrowDown.png
-  /usr/share/xine/skins/xinetic/SmallArrowUp.png
-  /usr/share/xine/skins/xinetic/skinconfig
-  /usr/share/xine/visuals/default.avi
-
-------------------
-
 Port Notes:
+
+----- version 0.99.5-11 -----
+Rebuilt for updated deps.
 
 ----- version 0.99.5-10 -----
 Initial release for Cygwin 1.7.
