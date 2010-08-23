@@ -1,0 +1,57 @@
+--- origsrc/xine-ui-0.99.6/src/xitk/common.h	2009-12-18 18:34:22.000000000 -0600
++++ src/xine-ui-0.99.6/src/xitk/common.h	2010-08-23 01:49:40.781796700 -0500
+@@ -375,8 +375,8 @@ typedef struct {
+ 
+   void                     (*nongui_error_msg)(char *text);
+ 
+-  FILE                      *stdout; /* Channel to original stdout at startup */
+-                                     /* before an evtl. later redirection     */
++  FILE                      *orig_stdout; /* Channel to original stdout at startup */
++                                          /* before an evtl. later redirection     */
+ } gGui_t;
+ 
+ extern gGui_t *gGui;
+--- origsrc/xine-ui-0.99.6/src/xitk/main.c	2010-02-27 08:26:21.000000000 -0600
++++ src/xine-ui-0.99.6/src/xitk/main.c	2010-08-23 01:51:05.617649000 -0500
+@@ -1425,7 +1425,7 @@ int main(int argc, char *argv[]) {
+   gGui->no_mouse               = 0;
+   gGui->wid                    = 0;
+   gGui->nongui_error_msg       = NULL;
+-  gGui->stdout                 = stdout;
++  gGui->orig_stdout            = stdout;
+   
+   window_attribute.x     = window_attribute.y      = -8192;
+   window_attribute.width = window_attribute.height = -1;
+@@ -1921,8 +1921,8 @@ int main(int argc, char *argv[]) {
+     else if(dup2(stdout_fd, STDOUT_FILENO) < 0)
+       fprintf(stderr, "cannot dup2 stdout_fd: %s.\n", strerror(errno));
+     else {
+-      gGui->stdout = guiout_fp;
+-      setlinebuf(gGui->stdout);
++      gGui->orig_stdout = guiout_fp;
++      setlinebuf(gGui->orig_stdout);
+       close(stdout_fd); /* stdout_fd was intermediate, not needed any longer */
+     }
+   }
+@@ -2242,8 +2242,8 @@ int main(int argc, char *argv[]) {
+ 
+   if(gGui->report != stdout)
+     fclose(gGui->report);
+-  if(gGui->stdout != stdout)
+-    fclose(gGui->stdout);
++  if(gGui->orig_stdout != stdout)
++    fclose(gGui->orig_stdout);
+ 
+   free_command_line_args(&_argv, _argc);
+ 
+--- origsrc/xine-ui-0.99.6/src/xitk/stdctl.c	2009-12-18 18:34:22.000000000 -0600
++++ src/xine-ui-0.99.6/src/xitk/stdctl.c	2010-08-23 01:51:19.043416900 -0500
+@@ -170,7 +170,7 @@ void stdctl_start(void) {
+   int err;
+ 
+   stdctl.fd = STDIN_FILENO;
+-  stdctl.fbk = gGui->stdout;
++  stdctl.fbk = gGui->orig_stdout;
+   
+   if((err = pthread_create(&(stdctl.thread), NULL, xine_stdctl_loop, NULL)) != 0) {
+     fprintf(stderr, _("%s(): can't create new thread (%s)\n"), __XINE_FUNCTION__, strerror(err));
