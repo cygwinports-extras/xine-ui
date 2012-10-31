@@ -16,7 +16,7 @@
 @@ -563,7 +569,7 @@
     int    (*x_init_threads)(void);
  
-    (void *) dlerror();
+    dlerror();
 -   if((xlib_handle = dlopen("libX11.so", RTLD_LAZY)) != NULL) {
 +   if((xlib_handle = dlopen(LIBX11_SO, RTLD_LAZY)) != NULL) {
       
