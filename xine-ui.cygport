@@ -1,6 +1,6 @@
 NAME="xine-ui"
 VERSION=0.99.7
-RELEASE=1
+RELEASE=2
 CATEGORY="Audio Video"
 SUMMARY="Xine GUI multimedia players"
 DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
