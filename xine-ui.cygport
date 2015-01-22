@@ -1,6 +1,6 @@
 NAME="xine-ui"
-VERSION=0.99.7
-RELEASE=2
+VERSION=0.99.9
+RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="Xine GUI multimedia players"
 DESCRIPTION="xine is a free multimedia player. It plays back CDs, DVDs, and
@@ -8,8 +8,8 @@ VCDs. It also decodes multimedia files like AVI, MOV, WMV, and MP3 from local
 disk drives, and displays multimedia streamed over the Internet. It interprets
 many of the most common multimedia formats available - and some of the most
 uncommon formats, too."
-HOMEPAGE="http://xinehq.de/"
-SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
+HOMEPAGE="http://www.xine-project.org/"
+SRC_URI="mirror://sourceforge/xine/xine-ui-${VERSION}.tar.xz"
 PATCH_URI="0.99.5-dlopen-libX11.patch"
 
 DIFF_EXCLUDES="*.1 build_rpms.sh"
