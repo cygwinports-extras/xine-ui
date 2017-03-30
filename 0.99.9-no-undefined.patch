@@ -1,0 +1,11 @@
+--- origsrc/xine-ui-0.99.9/src/xitk/Makefile.am	2013-09-27 15:58:22.000000000 -0500
++++ src/xine-ui-0.99.9/src/xitk/Makefile.am	2017-03-30 02:53:22.643800900 -0500
+@@ -73,7 +73,7 @@ xine_LDADD = \
+ 	     $(XINE_LIBS) $(X_PRE_LIBS) $(LIRC_LIBS) $(XFT_LIBS) \
+ 	     $(X_LIBS) $(XTEST_LIBS) $(XSSAVER_LIBS) $(CURL_LIBS) $(NVTVSIMPLE_LIBS) \
+ 	     -lX11 -lXext -lm $(DBG_LIBS) $(XV_LIB) $(LIBPNG_LIBS) $(JPEG_LIBS) \
+-	     $(LTLIBINTL) $(THREAD_LIBS) $(RT_LIBS)
++	     $(LTLIBINTL) $(LTLIBICONV) $(THREAD_LIBS) $(RT_LIBS)
+ 
+ xine_remote_CFLAGS = $(AM_CFLAGS) -DNETWORK_CLIENT
+ xine_remote_SOURCES = network.c

@@ -10,7 +10,10 @@ many of the most common multimedia formats available - and some of the most
 uncommon formats, too."
 HOMEPAGE="http://www.xine-project.org/"
 SRC_URI="mirror://sourceforge/xine/xine-ui-${VERSION}.tar.xz"
-PATCH_URI="0.99.5-dlopen-libX11.patch"
+PATCH_URI="
+	0.99.5-dlopen-libX11.patch
+	0.99.9-no-undefined.patch
+"
 
 DIFF_EXCLUDES="*.1 build_rpms.sh"
 
